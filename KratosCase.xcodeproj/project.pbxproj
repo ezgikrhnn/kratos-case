@@ -7,23 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AD577CF737A466125463FA3 /* Pods_KratosCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8381547C699BAB8895B36985 /* Pods_KratosCase.framework */; };
+		EC019A072C17086400BA312C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC019A062C17086400BA312C /* UserModel.swift */; };
+		EC019A092C170BCE00BA312C /* KCCreateAccountPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC019A082C170BCE00BA312C /* KCCreateAccountPageViewModel.swift */; };
 		ECD93CF22C1351AD0095EF1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93CF12C1351AD0095EF1C /* AppDelegate.swift */; };
 		ECD93CF42C1351AD0095EF1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93CF32C1351AD0095EF1C /* SceneDelegate.swift */; };
 		ECD93CF62C1351AD0095EF1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93CF52C1351AD0095EF1C /* ViewController.swift */; };
-		ECD93CF92C1351AD0095EF1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD93CF72C1351AD0095EF1C /* Main.storyboard */; };
 		ECD93CFB2C1351AF0095EF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD93CFA2C1351AF0095EF1C /* Assets.xcassets */; };
 		ECD93CFE2C1351AF0095EF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD93CFC2C1351AF0095EF1C /* LaunchScreen.storyboard */; };
+		ECD93D082C1352330095EF1C /* KCHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D072C1352330095EF1C /* KCHomePageViewController.swift */; };
+		ECD93D0C2C1391340095EF1C /* KCLogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D0B2C1391340095EF1C /* KCLogInPageViewController.swift */; };
+		ECD93D0E2C1391720095EF1C /* KCSignInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D0D2C1391720095EF1C /* KCSignInPageViewController.swift */; };
+		ECD93D102C1391A70095EF1C /* KCLogInPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D0F2C1391A70095EF1C /* KCLogInPageView.swift */; };
+		ECD93D122C1391C60095EF1C /* KCLogInPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D112C1391C60095EF1C /* KCLogInPageViewModel.swift */; };
+		ECD93D162C1392690095EF1C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D152C1392690095EF1C /* File.swift */; };
+		ECD93D182C1481580095EF1C /* KCCreateAccountPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D172C1481580095EF1C /* KCCreateAccountPageViewController.swift */; };
+		ECD93D1B2C1484400095EF1C /* KCCreateAccountPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D1A2C1484400095EF1C /* KCCreateAccountPageView.swift */; };
+		ECD93D1D2C163E4C0095EF1C /* KCHomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D1C2C163E4C0095EF1C /* KCHomePageView.swift */; };
+		ECD93D1F2C16F8A50095EF1C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECD93D1E2C16F8A40095EF1C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4708C0BAD54645C5E75780E9 /* Pods-KratosCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KratosCase.release.xcconfig"; path = "Target Support Files/Pods-KratosCase/Pods-KratosCase.release.xcconfig"; sourceTree = "<group>"; };
+		8381547C699BAB8895B36985 /* Pods_KratosCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KratosCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52A5661884FA53F1BE5C285 /* Pods-KratosCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KratosCase.debug.xcconfig"; path = "Target Support Files/Pods-KratosCase/Pods-KratosCase.debug.xcconfig"; sourceTree = "<group>"; };
+		EC019A062C17086400BA312C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		EC019A082C170BCE00BA312C /* KCCreateAccountPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCCreateAccountPageViewModel.swift; sourceTree = "<group>"; };
 		ECD93CEE2C1351AD0095EF1C /* KratosCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KratosCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD93CF12C1351AD0095EF1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD93CF32C1351AD0095EF1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ECD93CF52C1351AD0095EF1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ECD93CF82C1351AD0095EF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECD93CFA2C1351AF0095EF1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECD93CFD2C1351AF0095EF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECD93CFF2C1351AF0095EF1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD93D072C1352330095EF1C /* KCHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCHomePageViewController.swift; sourceTree = "<group>"; };
+		ECD93D0B2C1391340095EF1C /* KCLogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCLogInPageViewController.swift; sourceTree = "<group>"; };
+		ECD93D0D2C1391720095EF1C /* KCSignInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCSignInPageViewController.swift; sourceTree = "<group>"; };
+		ECD93D0F2C1391A70095EF1C /* KCLogInPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCLogInPageView.swift; sourceTree = "<group>"; };
+		ECD93D112C1391C60095EF1C /* KCLogInPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCLogInPageViewModel.swift; sourceTree = "<group>"; };
+		ECD93D152C1392690095EF1C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		ECD93D172C1481580095EF1C /* KCCreateAccountPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCCreateAccountPageViewController.swift; sourceTree = "<group>"; };
+		ECD93D1A2C1484400095EF1C /* KCCreateAccountPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCCreateAccountPageView.swift; sourceTree = "<group>"; };
+		ECD93D1C2C163E4C0095EF1C /* KCHomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCHomePageView.swift; sourceTree = "<group>"; };
+		ECD93D1E2C16F8A40095EF1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD577CF737A466125463FA3 /* Pods_KratosCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08E475DFD6BE10812D0D0292 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8381547C699BAB8895B36985 /* Pods_KratosCase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD2999DD683627FB9BF3DCD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B52A5661884FA53F1BE5C285 /* Pods-KratosCase.debug.xcconfig */,
+				4708C0BAD54645C5E75780E9 /* Pods-KratosCase.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ECD93CE52C1351AD0095EF1C = {
 			isa = PBXGroup;
 			children = (
 				ECD93CF02C1351AD0095EF1C /* KratosCase */,
 				ECD93CEF2C1351AD0095EF1C /* Products */,
+				DD2999DD683627FB9BF3DCD4 /* Pods */,
+				08E475DFD6BE10812D0D0292 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +102,66 @@
 		ECD93CF02C1351AD0095EF1C /* KratosCase */ = {
 			isa = PBXGroup;
 			children = (
+				ECD93D1E2C16F8A40095EF1C /* GoogleService-Info.plist */,
+				ECD93D142C13925F0095EF1C /* Extensions */,
+				ECD93D132C1391D20095EF1C /* Model */,
+				ECD93D0A2C1390FE0095EF1C /* ViewModel */,
+				ECD93D062C1351F50095EF1C /* View */,
+				ECD93D092C1390F00095EF1C /* ViewController */,
 				ECD93CF12C1351AD0095EF1C /* AppDelegate.swift */,
 				ECD93CF32C1351AD0095EF1C /* SceneDelegate.swift */,
 				ECD93CF52C1351AD0095EF1C /* ViewController.swift */,
-				ECD93CF72C1351AD0095EF1C /* Main.storyboard */,
 				ECD93CFA2C1351AF0095EF1C /* Assets.xcassets */,
 				ECD93CFC2C1351AF0095EF1C /* LaunchScreen.storyboard */,
 				ECD93CFF2C1351AF0095EF1C /* Info.plist */,
 			);
 			path = KratosCase;
+			sourceTree = "<group>";
+		};
+		ECD93D062C1351F50095EF1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECD93D0F2C1391A70095EF1C /* KCLogInPageView.swift */,
+				ECD93D1A2C1484400095EF1C /* KCCreateAccountPageView.swift */,
+				ECD93D1C2C163E4C0095EF1C /* KCHomePageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECD93D092C1390F00095EF1C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECD93D072C1352330095EF1C /* KCHomePageViewController.swift */,
+				ECD93D0B2C1391340095EF1C /* KCLogInPageViewController.swift */,
+				ECD93D0D2C1391720095EF1C /* KCSignInPageViewController.swift */,
+				ECD93D172C1481580095EF1C /* KCCreateAccountPageViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ECD93D0A2C1390FE0095EF1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ECD93D112C1391C60095EF1C /* KCLogInPageViewModel.swift */,
+				EC019A082C170BCE00BA312C /* KCCreateAccountPageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ECD93D132C1391D20095EF1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC019A062C17086400BA312C /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECD93D142C13925F0095EF1C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ECD93D152C1392690095EF1C /* File.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECD93D022C1351AF0095EF1C /* Build configuration list for PBXNativeTarget "KratosCase" */;
 			buildPhases = (
+				AC4955E2B85C395EDDFE3A9C /* [CP] Check Pods Manifest.lock */,
 				ECD93CEA2C1351AD0095EF1C /* Sources */,
 				ECD93CEB2C1351AD0095EF1C /* Frameworks */,
 				ECD93CEC2C1351AD0095EF1C /* Resources */,
+				D5D5B66A98C35EB57C48D640 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +226,79 @@
 			files = (
 				ECD93CFE2C1351AF0095EF1C /* LaunchScreen.storyboard in Resources */,
 				ECD93CFB2C1351AF0095EF1C /* Assets.xcassets in Resources */,
-				ECD93CF92C1351AD0095EF1C /* Main.storyboard in Resources */,
+				ECD93D1F2C16F8A50095EF1C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC4955E2B85C395EDDFE3A9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KratosCase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5D5B66A98C35EB57C48D640 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KratosCase/Pods-KratosCase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KratosCase/Pods-KratosCase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KratosCase/Pods-KratosCase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECD93CEA2C1351AD0095EF1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD93D082C1352330095EF1C /* KCHomePageViewController.swift in Sources */,
 				ECD93CF62C1351AD0095EF1C /* ViewController.swift in Sources */,
+				ECD93D0C2C1391340095EF1C /* KCLogInPageViewController.swift in Sources */,
 				ECD93CF22C1351AD0095EF1C /* AppDelegate.swift in Sources */,
+				ECD93D0E2C1391720095EF1C /* KCSignInPageViewController.swift in Sources */,
+				EC019A092C170BCE00BA312C /* KCCreateAccountPageViewModel.swift in Sources */,
+				ECD93D122C1391C60095EF1C /* KCLogInPageViewModel.swift in Sources */,
+				ECD93D1D2C163E4C0095EF1C /* KCHomePageView.swift in Sources */,
 				ECD93CF42C1351AD0095EF1C /* SceneDelegate.swift in Sources */,
+				ECD93D1B2C1484400095EF1C /* KCCreateAccountPageView.swift in Sources */,
+				ECD93D182C1481580095EF1C /* KCCreateAccountPageViewController.swift in Sources */,
+				EC019A072C17086400BA312C /* UserModel.swift in Sources */,
+				ECD93D162C1392690095EF1C /* File.swift in Sources */,
+				ECD93D102C1391A70095EF1C /* KCLogInPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ECD93CF72C1351AD0095EF1C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECD93CF82C1351AD0095EF1C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ECD93CFC2C1351AF0095EF1C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +426,7 @@
 		};
 		ECD93D032C1351AF0095EF1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B52A5661884FA53F1BE5C285 /* Pods-KratosCase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,7 +436,6 @@
 				INFOPLIST_FILE = KratosCase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,6 +453,7 @@
 		};
 		ECD93D042C1351AF0095EF1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4708C0BAD54645C5E75780E9 /* Pods-KratosCase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,7 +463,6 @@
 				INFOPLIST_FILE = KratosCase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
