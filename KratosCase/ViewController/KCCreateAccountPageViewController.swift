@@ -13,7 +13,6 @@ class KCCreateAccountPageViewController: UIViewController, KCCreateAccountPageVi
     let CAview = KCCreateAccountPageView()
     let viewModel = KCCreateAccountViewModel()
         
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Create Account Page"
@@ -42,25 +41,26 @@ class KCCreateAccountPageViewController: UIViewController, KCCreateAccountPageVi
     
     func createAccountButtonTapped() {
         // Kullanıcının e-posta, şifre, ad ve soyadı bilgilerini alıyorum
-           guard let email = CAview.emailTextField.text,
+        guard let email = CAview.emailTextField.text?.lowercased(),
                  let password = CAview.passwordTextField.text,
                  let name = CAview.nameTextField.text,
                  let surname = CAview.surnameTextField.text else {
-               // Kullanıcıdan gerekli bilgileri alamazsak işlemi iptal edelim
-               // Ayrıca burada bir hata mesajı gösterebiliriz
                return
            }
-
+        //email boşluklu oluşturulursa hata alıyor:gmail
+        let trimmedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
+        
         // UserModel oluşturma
-               let userModel = UserModel(name: name, surname: surname, email: email, uid: "")
+               let userModel = UserModel(name: name, surname: surname, email: trimmedEmail, uid: "")
                
                // ViewModel üzerinden hesap oluşturma işlemi
                viewModel.createAccount(with: userModel, password: password) { [weak self] result in
                    switch result {
-                   case .success:
+                   case .success(let userModel):
                        // Başarılı bir şekilde hesap oluştu, ana ekrana geçiş yap
                        DispatchQueue.main.async {
-                           let vc = KCHomePageViewController()
+                        
+                            let vc = KCHomePageViewController(userModel: userModel)
                            vc.modalPresentationStyle = .fullScreen
                            self?.present(vc, animated: true, completion: nil)
                        }
@@ -72,8 +72,3 @@ class KCCreateAccountPageViewController: UIViewController, KCCreateAccountPageVi
         }
     }
 }
-
-
-/**let vc = KCHomePageViewController()
- vc.modalPresentationStyle = .fullScreen
- self.present(vc, animated: true, completion: nil)*/

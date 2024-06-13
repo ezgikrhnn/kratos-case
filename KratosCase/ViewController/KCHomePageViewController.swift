@@ -9,14 +9,28 @@ import UIKit
 
 class KCHomePageViewController: UIViewController, KCHomePageViewDelegate{
   
-
     private let homeView = KCHomePageView()
-    
+    var userModel: UserModel?
+    let viewModel : KCHomePageViewModel
+   
+    init(userModel: UserModel) {
+            self.userModel = userModel
+            self.viewModel = KCHomePageViewModel(userModel: userModel)
+            super.init(nibName: nil, bundle: nil)
+        }
+        
+    required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home Page"
         view.addSubview(homeView)
         addCostraints()
+        
+        if let userModel = userModel {
+            homeView.titleLabel.text = "\(userModel.name) \(userModel.surname)"
+        }
     }
     
     func addCostraints(){

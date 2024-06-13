@@ -10,6 +10,7 @@ import UIKit
 protocol KCHomePageViewDelegate: AnyObject {
     func logOutButtonTapped()
 }
+
 class KCHomePageView: UIView {
 
     weak var delegate : KCHomePageViewDelegate?
@@ -38,7 +39,6 @@ class KCHomePageView: UIView {
     
     
     //MARK: - Init:
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .black

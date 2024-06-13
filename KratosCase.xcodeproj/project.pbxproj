@@ -10,6 +10,7 @@
 		5AD577CF737A466125463FA3 /* Pods_KratosCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8381547C699BAB8895B36985 /* Pods_KratosCase.framework */; };
 		EC019A072C17086400BA312C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC019A062C17086400BA312C /* UserModel.swift */; };
 		EC019A092C170BCE00BA312C /* KCCreateAccountPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC019A082C170BCE00BA312C /* KCCreateAccountPageViewModel.swift */; };
+		EC019A0B2C17A84B00BA312C /* KCHomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC019A0A2C17A84B00BA312C /* KCHomePageViewModel.swift */; };
 		ECD93CF22C1351AD0095EF1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93CF12C1351AD0095EF1C /* AppDelegate.swift */; };
 		ECD93CF42C1351AD0095EF1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93CF32C1351AD0095EF1C /* SceneDelegate.swift */; };
 		ECD93CF62C1351AD0095EF1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93CF52C1351AD0095EF1C /* ViewController.swift */; };
@@ -17,7 +18,6 @@
 		ECD93CFE2C1351AF0095EF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD93CFC2C1351AF0095EF1C /* LaunchScreen.storyboard */; };
 		ECD93D082C1352330095EF1C /* KCHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D072C1352330095EF1C /* KCHomePageViewController.swift */; };
 		ECD93D0C2C1391340095EF1C /* KCLogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D0B2C1391340095EF1C /* KCLogInPageViewController.swift */; };
-		ECD93D0E2C1391720095EF1C /* KCSignInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D0D2C1391720095EF1C /* KCSignInPageViewController.swift */; };
 		ECD93D102C1391A70095EF1C /* KCLogInPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D0F2C1391A70095EF1C /* KCLogInPageView.swift */; };
 		ECD93D122C1391C60095EF1C /* KCLogInPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D112C1391C60095EF1C /* KCLogInPageViewModel.swift */; };
 		ECD93D162C1392690095EF1C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93D152C1392690095EF1C /* File.swift */; };
@@ -33,6 +33,7 @@
 		B52A5661884FA53F1BE5C285 /* Pods-KratosCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KratosCase.debug.xcconfig"; path = "Target Support Files/Pods-KratosCase/Pods-KratosCase.debug.xcconfig"; sourceTree = "<group>"; };
 		EC019A062C17086400BA312C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		EC019A082C170BCE00BA312C /* KCCreateAccountPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCCreateAccountPageViewModel.swift; sourceTree = "<group>"; };
+		EC019A0A2C17A84B00BA312C /* KCHomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCHomePageViewModel.swift; sourceTree = "<group>"; };
 		ECD93CEE2C1351AD0095EF1C /* KratosCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KratosCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD93CF12C1351AD0095EF1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD93CF32C1351AD0095EF1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		ECD93CFF2C1351AF0095EF1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECD93D072C1352330095EF1C /* KCHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCHomePageViewController.swift; sourceTree = "<group>"; };
 		ECD93D0B2C1391340095EF1C /* KCLogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCLogInPageViewController.swift; sourceTree = "<group>"; };
-		ECD93D0D2C1391720095EF1C /* KCSignInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCSignInPageViewController.swift; sourceTree = "<group>"; };
 		ECD93D0F2C1391A70095EF1C /* KCLogInPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCLogInPageView.swift; sourceTree = "<group>"; };
 		ECD93D112C1391C60095EF1C /* KCLogInPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCLogInPageViewModel.swift; sourceTree = "<group>"; };
 		ECD93D152C1392690095EF1C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
@@ -133,7 +133,6 @@
 			children = (
 				ECD93D072C1352330095EF1C /* KCHomePageViewController.swift */,
 				ECD93D0B2C1391340095EF1C /* KCLogInPageViewController.swift */,
-				ECD93D0D2C1391720095EF1C /* KCSignInPageViewController.swift */,
 				ECD93D172C1481580095EF1C /* KCCreateAccountPageViewController.swift */,
 			);
 			path = ViewController;
@@ -144,6 +143,7 @@
 			children = (
 				ECD93D112C1391C60095EF1C /* KCLogInPageViewModel.swift */,
 				EC019A082C170BCE00BA312C /* KCCreateAccountPageViewModel.swift */,
+				EC019A0A2C17A84B00BA312C /* KCHomePageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,8 +282,8 @@
 				ECD93D082C1352330095EF1C /* KCHomePageViewController.swift in Sources */,
 				ECD93CF62C1351AD0095EF1C /* ViewController.swift in Sources */,
 				ECD93D0C2C1391340095EF1C /* KCLogInPageViewController.swift in Sources */,
+				EC019A0B2C17A84B00BA312C /* KCHomePageViewModel.swift in Sources */,
 				ECD93CF22C1351AD0095EF1C /* AppDelegate.swift in Sources */,
-				ECD93D0E2C1391720095EF1C /* KCSignInPageViewController.swift in Sources */,
 				EC019A092C170BCE00BA312C /* KCCreateAccountPageViewModel.swift in Sources */,
 				ECD93D122C1391C60095EF1C /* KCLogInPageViewModel.swift in Sources */,
 				ECD93D1D2C163E4C0095EF1C /* KCHomePageView.swift in Sources */,

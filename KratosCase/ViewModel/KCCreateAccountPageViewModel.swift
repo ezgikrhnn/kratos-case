@@ -5,22 +5,40 @@
 //  Created by Ezgi Karahan on 10.06.2024.
 //
 
-/**UserModel sınıfında password adında bir özellik yok, çünkü şifre bir kullanıcı özelliği olarak saklanmıyor. şifreyi parametre olarak geçtim**/
+/**UserModel sınıfında password adında bir özellik yok, çünkü şifre bir kullanıcı özelliği olarak saklanmıyor. şifreyi parametre olarak geçtim
+ KCCreateAccountViewModel ile, kullanıcı oluşturulduktan sonra kullanıcı bilgilerini Firestore'a kaydediyoruz. Kullanıcı oluşturma işlemi ve Firestore'a veri yazma işlemi sırasında herhangi bir hata oluşursa, hata geri döndürülüyor. İşlemler başarılı olursa, başarı geri döndürülüyor
+ **/
 
 import Foundation
 import FirebaseAuth
+import FirebaseFirestore
 
 class KCCreateAccountViewModel {
     
-    func createAccount(with userModel: UserModel, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
-        // Firebase Authentication kullanarak kullanıcı oluşturma işlemini gerçekleştir
+    
+    func createAccount(with userModel: UserModel, password: String, completion: @escaping (Result<UserModel, Error>) -> Void) {
         Auth.auth().createUser(withEmail: userModel.email, password: password) { authResult, error in
             if let error = error {
-                // Kullanıcı oluşturma işlemi başarısız oldu
                 completion(.failure(error))
-            } else {
-                // Kullanıcı oluşturma işlemi başarılı
-                completion(.success(()))
+            } else if let authResult = authResult {
+                let uid = authResult.user.uid
+                let db = Firestore.firestore()
+                let userRef = db.collection("users").document(uid)
+                
+                let data: [String: Any] = [
+                    "name": userModel.name,
+                    "surname": userModel.surname,
+                    "email": userModel.email
+                ]
+                
+                userRef.setData(data) { error in
+                    if let error = error {
+                        completion(.failure(error))
+                    } else {
+                        let updatedUserModel = UserModel(name: userModel.name, surname: userModel.surname, email: userModel.email, uid: uid)
+                        completion(.success(updatedUserModel))
+                    }
+                }
             }
         }
     }

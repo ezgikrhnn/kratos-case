@@ -33,24 +33,26 @@ class KCLogInPageViewController: UIViewController, KCLogInPageViewDelegate {
     }
     
     func logInButtonTapped() {
-            guard let email = logInView.emailTextField.text,
+        guard let email = logInView.emailTextField.text?.lowercased(),
                   let password = logInView.passwordTextField.text else {
-                // Kullanıcıdan gerekli bilgileri alamazsak işlemi iptal edelim
-                // Ayrıca burada bir hata mesajı gösterebiliriz
-                return
+                //kullanıcıdan bilgileri alamadım, uyarı göster:
+            showAlert(title: "Error", message: "Invalid user name or password")
+            return
             }
+        let trimmedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
 
         //viewmodel üzerinden oturum açma işlemi
-        viewModel.loginUser(email: email, password: password) { [weak self] result in
+        viewModel.loginUser(email: trimmedEmail, password: password) { [weak self] result in
             switch result {
-            case .success:
+            case .success(let userModel):
                 DispatchQueue.main.async {
-                    let vc = KCHomePageViewController()
+                    let vc = KCHomePageViewController(userModel: userModel)
                     vc.modalPresentationStyle = .fullScreen
                     self?.present(vc, animated: true, completion: nil)
                 }
             case .failure(let error):
                 print("Oturum açma Hatası: \(error.localizedDescription)")
+                self?.showAlert(title: "Login Error", message: "Invalid user name or password")
             }
         }
     }
@@ -59,5 +61,11 @@ class KCLogInPageViewController: UIViewController, KCLogInPageViewDelegate {
         let vc = KCCreateAccountPageViewController()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
