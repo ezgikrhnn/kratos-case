@@ -9,10 +9,25 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 
-class KCLogInPageViewModel {
+//KCLogInPageViewModelProtocol protokolu
+protocol KCLogInPageViewModelProtocol {
+    func loginUser(email: String, password: String, completion: @escaping (Result<UserModel, Error>)-> Void)
+}
+
+class KCLogInPageViewModel: KCLogInPageViewModelProtocol {
     
+    private let auth: FirebaseAuthProtocol
+    private let firestore: FirestoreProtocol
+    
+    //dependency injection için constructor:
+    init(auth: FirebaseAuthProtocol, firestore: FirestoreProtocol) {
+        self.auth = auth
+        self.firestore = firestore
+    }
+    
+    //kullanıcı girişlerini işleyen fonksiyon
     func loginUser(email: String, password: String, completion: @escaping (Result<UserModel, Error>) -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+        auth.signInWithEmail(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 completion(.failure(error))
             } else if let authResult = authResult {

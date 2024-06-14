@@ -7,12 +7,23 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class KCCreateAccountPageViewController: UIViewController, KCCreateAccountPageViewDelegate {
   
     let CAview = KCCreateAccountPageView()
-    let viewModel = KCCreateAccountViewModel()
+    let viewModel : KCCreateAccountViewModelProtocol
         
+    // Dependency Injection ile ViewModel geçirilmesi
+    init(viewModel: KCCreateAccountViewModelProtocol) {
+            self.viewModel = viewModel
+            super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Create Account Page"
@@ -34,7 +45,8 @@ class KCCreateAccountPageViewController: UIViewController, KCCreateAccountPageVi
     }
     
     func cancelButtonTapped() {
-        let vc = KCLogInPageViewController()
+        let viewModel2 = KCLogInPageViewModel(auth: Auth.auth(), firestore: Firestore.firestore())
+        let vc = KCLogInPageViewController(viewModel: viewModel2)
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
@@ -54,7 +66,7 @@ class KCCreateAccountPageViewController: UIViewController, KCCreateAccountPageVi
                let userModel = UserModel(name: name, surname: surname, email: trimmedEmail, uid: "")
                
                // ViewModel üzerinden hesap oluşturma işlemi
-               viewModel.createAccount(with: userModel, password: password) { [weak self] result in
+               viewModel.createAccount(with: userModel, password: password) { [weak self] (result: Result<UserModel, Error>) in
                    switch result {
                    case .success(let userModel):
                        // Başarılı bir şekilde hesap oluştu, ana ekrana geçiş yap

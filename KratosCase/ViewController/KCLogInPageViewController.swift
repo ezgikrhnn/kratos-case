@@ -6,12 +6,23 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+import FirebaseFirestore
 
 class KCLogInPageViewController: UIViewController, KCLogInPageViewDelegate {
 
     let logInView = KCLogInPageView()
-    let viewModel = KCLogInPageViewModel()
+    let viewModel : KCLogInPageViewModelProtocol
+    
+    //dependency Injection için constructor
+    init(viewModel: KCLogInPageViewModelProtocol){
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +69,8 @@ class KCLogInPageViewController: UIViewController, KCLogInPageViewDelegate {
     }
     
     func createOneButtonTapped() {
-        let vc = KCCreateAccountPageViewController()
+        let viewModel = KCCreateAccountViewModel(auth: Auth.auth(), firestore: Firestore.firestore())
+        let vc = KCCreateAccountPageViewController(viewModel: viewModel)
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }

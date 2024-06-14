@@ -13,11 +13,25 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 
-class KCCreateAccountViewModel {
+// Kullanıcı oluşturma işlemleri için ViewModel protokolü
+protocol KCCreateAccountViewModelProtocol {
+    init(auth: FirebaseAuthProtocol, firestore: FirestoreProtocol) //protokoller de init alabilir.
+    func createAccount(with userModel: UserModel, password: String, completion: @escaping (Result<UserModel, Error>) -> Void)
+}
+
+
+class KCCreateAccountViewModel: KCCreateAccountViewModelProtocol {
     
+    private let auth: FirebaseAuthProtocol
+    private let firestore: FirestoreProtocol
+    
+    required init(auth: FirebaseAuthProtocol = Auth.auth(), firestore: FirestoreProtocol = Firestore.firestore()) {
+            self.auth = auth
+            self.firestore = firestore
+        }
     
     func createAccount(with userModel: UserModel, password: String, completion: @escaping (Result<UserModel, Error>) -> Void) {
-        Auth.auth().createUser(withEmail: userModel.email, password: password) { authResult, error in
+        auth.createUser(withEmail: userModel.email, password: password) { authResult, error in
             if let error = error {
                 completion(.failure(error))
             } else if let authResult = authResult {

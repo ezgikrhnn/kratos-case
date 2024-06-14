@@ -6,18 +6,26 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let vc = KCLogInPageViewController()
+        //firebase bağımlılıklarını oluşturma:
+        let auth: FirebaseAuthProtocol = Auth.auth()
+        let firestore: FirestoreProtocol = Firestore.firestore()
+        
+        //viewModeli oluşturma
+        let viewModel = KCLogInPageViewModel(auth: auth, firestore: firestore)
+        
+        //viewcontrollerı oluşturma ve viewmodeli enjecte etme 
+        let vc = KCLogInPageViewController(viewModel: viewModel)
         //ACTabbarViewController()
        
         let navigationController = UINavigationController(rootViewController: vc)

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class KCHomePageViewController: UIViewController, KCHomePageViewDelegate{
   
@@ -46,9 +48,24 @@ class KCHomePageViewController: UIViewController, KCHomePageViewDelegate{
     }
     
     func logOutButtonTapped() {
-        let vc = KCLogInPageViewController()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        guard let sceneDelegate = UIApplication.shared.connectedScenes
+                   .first?.delegate as? SceneDelegate else {
+                   return
+               }
+               
+               // Auth ve Firestore instance'ları
+               let auth: FirebaseAuthProtocol = Auth.auth()
+               let firestore: FirestoreProtocol = Firestore.firestore()
+
+               // Yeni bir viewModel instance'ı oluşturun
+               let viewModel = KCLogInPageViewModel(auth: auth, firestore: firestore)
+               
+               // viewModel'i kullanarak yeni bir KCLogInPageViewController oluşturun
+               let vc = KCLogInPageViewController(viewModel: viewModel)
+               
+               let navigationController = UINavigationController(rootViewController: vc)
+               sceneDelegate.window?.rootViewController = navigationController
+               sceneDelegate.window?.makeKeyAndVisible()
     }
     
 

@@ -11,6 +11,7 @@
 		EC019A072C17086400BA312C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC019A062C17086400BA312C /* UserModel.swift */; };
 		EC019A092C170BCE00BA312C /* KCCreateAccountPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC019A082C170BCE00BA312C /* KCCreateAccountPageViewModel.swift */; };
 		EC019A0B2C17A84B00BA312C /* KCHomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC019A0A2C17A84B00BA312C /* KCHomePageViewModel.swift */; };
+		EC78D1402C1C500B00DE156D /* FirebaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78D13F2C1C500B00DE156D /* FirebaseProtocols.swift */; };
 		ECD93CF22C1351AD0095EF1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93CF12C1351AD0095EF1C /* AppDelegate.swift */; };
 		ECD93CF42C1351AD0095EF1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93CF32C1351AD0095EF1C /* SceneDelegate.swift */; };
 		ECD93CF62C1351AD0095EF1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD93CF52C1351AD0095EF1C /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		EC019A062C17086400BA312C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		EC019A082C170BCE00BA312C /* KCCreateAccountPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCCreateAccountPageViewModel.swift; sourceTree = "<group>"; };
 		EC019A0A2C17A84B00BA312C /* KCHomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCHomePageViewModel.swift; sourceTree = "<group>"; };
+		EC78D13F2C1C500B00DE156D /* FirebaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProtocols.swift; sourceTree = "<group>"; };
 		ECD93CEE2C1351AD0095EF1C /* KratosCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KratosCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD93CF12C1351AD0095EF1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD93CF32C1351AD0095EF1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				ECD93D152C1392690095EF1C /* File.swift */,
+				EC78D13F2C1C500B00DE156D /* FirebaseProtocols.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				EC019A092C170BCE00BA312C /* KCCreateAccountPageViewModel.swift in Sources */,
 				ECD93D122C1391C60095EF1C /* KCLogInPageViewModel.swift in Sources */,
 				ECD93D1D2C163E4C0095EF1C /* KCHomePageView.swift in Sources */,
+				EC78D1402C1C500B00DE156D /* FirebaseProtocols.swift in Sources */,
 				ECD93CF42C1351AD0095EF1C /* SceneDelegate.swift in Sources */,
 				ECD93D1B2C1484400095EF1C /* KCCreateAccountPageView.swift in Sources */,
 				ECD93D182C1481580095EF1C /* KCCreateAccountPageViewController.swift in Sources */,

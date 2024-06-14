@@ -17,6 +17,17 @@ class KCCreateAccountPageView: UIView {
     //MARK: - Properties:
     weak var delegate : KCCreateAccountPageViewDelegate?
     
+    let createLabel : UILabel = {
+       let label = UILabel()
+       label.text = "Create Account"
+       label.textColor = .red
+       label.font = UIFont(name: "ChalkboardSE-Bold", size: 35.0)
+       label.numberOfLines = 5
+       label.textAlignment = .left
+       label.translatesAutoresizingMaskIntoConstraints = false
+       return label
+   }()
+    
     let nameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Name"
@@ -108,7 +119,7 @@ class KCCreateAccountPageView: UIView {
         super.init(frame: frame)
         backgroundColor = .black
         addSubview(accountStackView)
-        addSubviews(createAccountButton, cancelButton)
+        addSubviews(createAccountButton, cancelButton, createLabel)
         addConstraints()
     }
     
@@ -119,6 +130,10 @@ class KCCreateAccountPageView: UIView {
     //MARK: - Functions:
     private func addConstraints(){
         NSLayoutConstraint.activate([
+            
+            createLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            createLabel.topAnchor.constraint(equalTo: topAnchor, constant: 80),
+            
             // Stack view ortalamak için
             accountStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             accountStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
