@@ -28,22 +28,23 @@ class SplashViewController: UIViewController {
         do {
             let gif = try UIImage(gifName: "launch_gif.gif")
             imageView.setGifImage(gif)
-        } catch {
-            print("GIF yüklenirken hata oluştu: \(error)")
-        }
-        
-        // UIImageView için kısıtlamalar ekle
-        NSLayoutConstraint.activate([
+                   
+            // UIImageView için kısıtlamalar ekle
+            NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             imageView.widthAnchor.constraint(equalTo: view.widthAnchor),
             imageView.heightAnchor.constraint(equalTo: view.heightAnchor)
-        ])
-        
-        // 5 saniye sonra ana ekrana geçiş yap
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-            self.showMainScreen()
-        }
+            ])
+                    
+            // 5 sn sonra ana ekrana geçiş yap
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                self.showMainScreen()
+            }
+                    
+            } catch {
+                print("GIF yüklenirken hata oluştu: \(error)")
+            }
     }
     
     func showMainScreen() {
@@ -51,8 +52,8 @@ class SplashViewController: UIViewController {
         let firestore: FirestoreProtocol = Firestore.firestore()
         let viewModel = KCLogInPageViewModel(auth: auth, firestore: firestore)
                 
-        let mainVC = KCLogInPageViewController(viewModel: viewModel) // Ana ekranınızın view controller'ını burada çağırın
-        mainVC.modalPresentationStyle = .fullScreen
-        self.present(mainVC, animated: true, completion: nil)
+        let vc = KCLogInPageViewController(viewModel: viewModel) // Ana ekran vc'si
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 }

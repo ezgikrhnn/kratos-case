@@ -142,6 +142,7 @@ class KCLogInPageView: UIView {
         fatalError("Unsupported")    ///desteklenmediği için fatalError
     }
     
+    //MARK: -Functions
     private func addConstraints(){
         NSLayoutConstraint.activate([
             

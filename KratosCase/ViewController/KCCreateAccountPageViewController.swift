@@ -11,9 +11,11 @@ import FirebaseFirestore
 
 class KCCreateAccountPageViewController: UIViewController, KCCreateAccountPageViewDelegate {
   
+    //MARK: -Properties
     let CAview = KCCreateAccountPageView()
     let viewModel : KCCreateAccountViewModelProtocol
-        
+      
+    //MARK: -Init
     // Dependency Injection ile ViewModel geçirilmesi
     init(viewModel: KCCreateAccountViewModelProtocol) {
             self.viewModel = viewModel
@@ -24,6 +26,7 @@ class KCCreateAccountPageViewController: UIViewController, KCCreateAccountPageVi
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: -Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Create Account Page"

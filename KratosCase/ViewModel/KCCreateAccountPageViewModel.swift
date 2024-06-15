@@ -19,7 +19,6 @@ protocol KCCreateAccountViewModelProtocol {
     func createAccount(with userModel: UserModel, password: String, completion: @escaping (Result<UserModel, Error>) -> Void)
 }
 
-
 class KCCreateAccountViewModel: KCCreateAccountViewModelProtocol {
     
     private let auth: FirebaseAuthProtocol

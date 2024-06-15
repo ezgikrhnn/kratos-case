@@ -11,9 +11,11 @@ import FirebaseFirestore
 
 class KCLogInPageViewController: UIViewController, KCLogInPageViewDelegate {
 
+    //MARK: -Properties
     let logInView = KCLogInPageView()
     let viewModel : KCLogInPageViewModelProtocol
     
+    //MARK: -Init
     //dependency Injection için constructor
     init(viewModel: KCLogInPageViewModelProtocol){
         self.viewModel = viewModel
@@ -24,6 +26,7 @@ class KCLogInPageViewController: UIViewController, KCLogInPageViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: -Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         logInView.delegate = self //delegate

@@ -13,6 +13,7 @@ protocol KCHomePageViewDelegate: AnyObject {
 
 class KCHomePageView: UIView {
 
+    //MARK: -Properties
     weak var delegate : KCHomePageViewDelegate?
     
     let titleLabel : UILabel = {
@@ -50,10 +51,10 @@ class KCHomePageView: UIView {
         fatalError("Unsupported")    ///desteklenmediği için fatalError
     }
     
+    //MARK: -Functions
     @objc private func logOutButtonPressed(){
         delegate?.logOutButtonTapped()
     }
-    
     
     private func addConstraints(){
         NSLayoutConstraint.activate([

@@ -10,11 +10,13 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class KCHomePageViewController: UIViewController, KCHomePageViewDelegate{
-  
+    
+    //MARK: -Properties
     private let homeView = KCHomePageView()
     var userModel: UserModel?
     let viewModel : KCHomePageViewModel
    
+    //MARK: -Init
     init(userModel: UserModel) {
             self.userModel = userModel
             self.viewModel = KCHomePageViewModel(userModel: userModel)
@@ -24,6 +26,8 @@ class KCHomePageViewController: UIViewController, KCHomePageViewDelegate{
     required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
+    
+    //MARK: -Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home Page"
