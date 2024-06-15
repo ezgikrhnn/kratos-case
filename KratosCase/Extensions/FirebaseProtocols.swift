@@ -15,7 +15,7 @@ import FirebaseAuth
 // Firebase Authentication protokolü
 protocol FirebaseAuthProtocol {
     func signInWithEmail(withEmail email: String, password: String, completion: ((AuthDataResult?, Error?) -> Void)?)
-    func createUser(withEmail email: String, password: String, completion: @escaping (AuthDataResult?, Error?) -> Void)
+    func createNewUser(withEmail email: String, password: String, completion: @escaping (AuthDataResult?, Error?) -> Void)
 }
 
 // Auth sınıfına protokol uyumluluğu ekleme
@@ -24,7 +24,8 @@ extension Auth: FirebaseAuthProtocol {
         signIn(withEmail: email, password: password, completion: completion)
         
     }
-    func createUser(withEmail email: String, password: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
+    
+    func createNewUser(withEmail email: String, password: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
             createUser(withEmail: email, password: password, completion: completion)
     }
     

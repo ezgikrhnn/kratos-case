@@ -31,7 +31,7 @@ class KCCreateAccountViewModel: KCCreateAccountViewModelProtocol {
         }
     
     func createAccount(with userModel: UserModel, password: String, completion: @escaping (Result<UserModel, Error>) -> Void) {
-        auth.createUser(withEmail: userModel.email, password: password) { authResult, error in
+        auth.createNewUser(withEmail: userModel.email, password: password) { authResult, error in
             if let error = error {
                 completion(.failure(error))
             } else if let authResult = authResult {

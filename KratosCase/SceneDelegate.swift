@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //ACTabbarViewController()
        
         let navigationController = UINavigationController(rootViewController: vc)
-        window.rootViewController = navigationController
+        window.rootViewController = SplashViewController()
         self.window = window
         window.makeKeyAndVisible()
     }

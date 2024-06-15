@@ -167,7 +167,7 @@ class KCLogInPageView: UIView {
             passwordTextField.heightAnchor.constraint(equalToConstant: 50),
             
             rememberLabel.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15),
-            rememberLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
+            rememberLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             
             forgotPasswordLabel.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15),
             forgotPasswordLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
