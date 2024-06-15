@@ -82,7 +82,7 @@ class KCCreateAccountPageViewController: UIViewController, KCCreateAccountPageVi
                    case .failure(let error):
                        // Hata oluştuğunda kullanıcıya bilgi ver
                        print("Kullanıcı oluşturma hatası: \(error.localizedDescription)")
-                       // Ayrıca burada bir hata mesajı gösterebiliriz
+                      
                    }
         }
     }

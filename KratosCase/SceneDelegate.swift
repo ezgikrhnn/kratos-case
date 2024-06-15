@@ -26,7 +26,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //viewcontrollerı oluşturma ve viewmodeli enjecte etme 
         let vc = KCLogInPageViewController(viewModel: viewModel)
-        //ACTabbarViewController()
        
         let navigationController = UINavigationController(rootViewController: vc)
         window.rootViewController = SplashViewController()

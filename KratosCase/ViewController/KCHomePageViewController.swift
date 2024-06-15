@@ -61,10 +61,10 @@ class KCHomePageViewController: UIViewController, KCHomePageViewDelegate{
                let auth: FirebaseAuthProtocol = Auth.auth()
                let firestore: FirestoreProtocol = Firestore.firestore()
 
-               // Yeni bir viewModel instance'ı oluşturun
+               // Yeni bir viewModel instance'ı
                let viewModel = KCLogInPageViewModel(auth: auth, firestore: firestore)
                
-               // viewModel'i kullanarak yeni bir KCLogInPageViewController oluşturun
+               // viewModel'i kullanarak yeni bir KCLogInPageViewController 
                let vc = KCLogInPageViewController(viewModel: viewModel)
                
                let navigationController = UINavigationController(rootViewController: vc)
